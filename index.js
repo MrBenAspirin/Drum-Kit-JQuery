@@ -1,18 +1,18 @@
 
 $(".drum").on("click", function(){
     playSound(this.innerHTML);
-    btnActive(this.innerHTML);
+    buttonAnimation(this.innerHTML);
 });
 
 $(document).on("keydown", function(){
     playSound(event.key);
-    btnActive(event.key);
+    buttonAnimation(event.key);
 });
 
 
-function playSound(btnSelect){
+function playSound(key){
 
-    switch (btnSelect){
+    switch (key){
         case 'w':
             var audio = new Audio('sounds/tom-1.mp3');
             audio.play();
